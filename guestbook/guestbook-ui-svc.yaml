@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: guestbook-ui
 spec:
+  # Added LoadBalancer type to expose the service externally
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 80
