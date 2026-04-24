@@ -13,7 +13,7 @@ spec:
      repoURL: "https://kubernetes.github.io/ingress-nginx"
      targetRevision: 4.6.1
      helm:
-       valueFiles:
+       valuesFiles:
          - $values/ingress-nginx/values.yaml
    - repoURL: "https://github.com/argoproj/argocd-example-apps.git"
      ref: values
