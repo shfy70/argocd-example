@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: argocd
+  name: eks-cluster
+  labels:
+    argocd.argoproj.io/secret-type: cluster
+    environment: "prod"
+    provider: "aws"
+    platform: "eks"
+type: Opaque
+stringData:
+  name: eks-cluster
+  server: https://CE5A345D9E873595F23513E0AF4BA042.gr7.us-east-2.eks.amazonaws.com
+  config: |
+    {
+      "execProviderConfig": {
+        "command": "argocd-k8s-auth",
+        "args": [
+          "aws",
+          "--cluster-name",
+          "labtest"
+        ],
+        "apiVersion": "client.authentication.k8s.io/v1beta1",
+        "env": {
+          "AWS_REGION": "us-east-2",
+          "AWS_ACCESS_KEY_ID": "AK2CF6ZH36W4WBGDWU6H",
+          "AWS_SECRET_ACCESS_KEY": "KhG3n7ge3BvtMwCQM2Sn5pAVd9McqKU5mKDZWQB9"
+        }
+      },
+      "tlsClientConfig": {
+        "insecure": false,
+        "caData": "LS0tLS2FWSdJTbBAZVKFSUZJQ0FURS0tLS0tCk1JSURCVEPAQMSyZ0F3SUJBZ0lJQmM1by9iZHFNZG93RDVZSktvWklodmNOQVFTAWJRQXdGVEVUTUJFR0ExVMCSMFhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TmpBMk1qWXlNekEyTWpWYUZ8CJp6akGyTWpNeU16RXhNalZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURIc1ZYQnVFN0pOelp6U1NJWEtoMzBETWNYTExXekVWNWhMNzEvTmE5bk5nZy96eC8wS0MxZ2prOGIKY1dhKzNNSnFuSjRaTnZjTFZnNGFPOVc1ekFtRFIwbVdTTExBbnFJaDk1aXZFQVNzTFZMRVZMQU5LWEc2eG8xdwp4VkZETDk4V01VWFpUc0RiMjVuRVNXaGVTdy92M1BFb2cwNThYREwxSTNqMERvYTZUcDlmM2VRVHdIT1R1VFBNCmtmOGZHTWQwL3NzZi8zOStnU1l3UXhmb1dLZjdHVDR0YVZVZkJubEVXSThHcW9IeTR1VXVMQTV0bURCTVIraVYKbHE3WWd4emNaZXZFVkIzMkRaWnUyTkoyaWxKQzJDYU95NWg4WVltSmg3RHltQVhaa21XZWJYOUwzUVRzNkkvWQpsbllCVncyWTBOL3ZVWEdEMDRNcy8vWmowWk5iQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRdTV0ZE16SExra0cxS1F1TVY1VXc2K2w1cUVqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQWhMUkMra2FKRQpwWDJoZU5Kb1F3am91eDE1Wmc0M3hFNjExVldRRzVtYXA2MnM1MjdhaEpTNnVNSGRPQ3phend5T1N3cUlQenNLClE3Qm5pQWh5L01PN1VKOFR5MVNtc2ljVE8rMm5sRnJOaWtTSUNYWlZqcy94RjU1QWIxQzZDek05UmJzSW1YUjgKSm5XTDdtdzhaMkwxa2FTbDNmbVk4dThLWW5oYWdvV2NqNnEzaFNOMVl2ZDdSRlNHMXEyV3I5QTZSVndqOHFKOApGbktBYkk1VlhPdlZSQko1Mzgwdnp0RmFoNGpvc0ZzVC8vYWNVOTNDZmFVMlNHcUpVY2FmQWgvaU0vc20yd3FICmlGZEY5RE9MMURnY295cXJ3dEJuYzZpa3gxcE5TR0MrZ2FyL05EUFBhdWUxUVRRUjR5QWNGZEtMTDkwTTFBa3EKOU5FZjdsWkVqWTdnCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+      }
+    }
+###: Note the secrets here are not real, when doing it again, need to ensure real one!
