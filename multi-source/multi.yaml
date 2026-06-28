@@ -15,7 +15,6 @@ spec:
       helm:
         valueFiles:
           - $values/ingress-nginx/values.yaml
-    - repoURL: "https://github.com/argoproj/argocd-example-apps.git"
+    - repoURL: "https://github.com/mabusaa/argocd-example.git"
       ref: values
-      path: values
       targetRevision: master
