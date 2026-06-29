@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: target-down
+  namespace: monitoring
+  labels:
+    app: kube-prometheus-stack
+    release: prometheus
+spec:
+  groups:
+    - name: general.rules
+      rules:
+        - alert: TargetDown
+          expr: 100 * (count by (cluster, job, namespace, service) (up == 0) / count by (cluster, job, namespace, service) (up)) > 10
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: "{{ $value | humanize }}% of {{ $labels.job }}/{{ $labels.service }} targets are down"
+            description: "{{ $labels.job }} in namespace {{ $labels.namespace }} (cluster: {{ $labels.cluster }}) has {{ $value | humanize }}% of its targets down."
+            runbook_url: "https://runbooks.prometheus-operator.dev/runbooks/general/targetdown"
