@@ -9,7 +9,7 @@ spec:
     server: "https://212.2.243.159:6443"
   project: default
   source:
-    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    repoURL: "https://github.com/shfy70/argocd-example.git"
     path: apps/civo/nginx-manifests
     targetRevision: master
   syncPolicy:
