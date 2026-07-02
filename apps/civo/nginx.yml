@@ -9,9 +9,9 @@ spec:
     server: "https://212.2.243.159:6443"
   project: default
   source:
-    repoURL: "https://charts.bitnami.com/bitnami"
-    chart: nginx
-    targetRevision: "*"
+    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    path: apps/civo/nginx-manifests
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true
