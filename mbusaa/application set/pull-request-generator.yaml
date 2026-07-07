@@ -26,7 +26,7 @@ spec:
         path: helm/webapp
       project: "default"
       destination:
-        server: https://kubernetes.default.svc
+        server: https://212.2.243.159:6443
         namespace: webapp-{{branch}}-{{number}}
       syncPolicy:
          syncOptions:
