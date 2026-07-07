@@ -4,6 +4,7 @@ metadata:
   labels:
     app: solar-system2
   name: solar-system2
+  namespace: argocd
 spec:
   replicas: 3
   selector:
