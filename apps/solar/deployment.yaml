@@ -21,3 +21,10 @@ spec:
         imagePullPolicy: Always
         ports: 
         - containerPort: 80
+        volumeMounts:
+          - name: nfs-storage
+            mountPath: /data
+      volumes:
+        - name: nfs-storage
+          persistentVolumeClaim:
+            claimName: synology-nfs-pvc
