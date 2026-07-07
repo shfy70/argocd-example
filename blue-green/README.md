@@ -13,18 +13,4 @@ argocd app create --name blue-green --repo https://github.com/argoproj/argocd-ex
 Once the application is synced you can access it using `blue-green-helm-guestbook` service.
 
 3. Change image version parameter to trigger blue-green deployment process:
-
-```
-argocd app set blue-green -p image.tag=0.2 && argocd app sync blue-green
-```
-
-Now application runs `ks-guestbook-demo:0.1` and `ks-guestbook-demo:0.2` images simultaneously.
-The `ks-guestbook-demo:0.2` is still considered `blue` available only via preview service `blue-green-helm-guestbook-preview`.
-
-4. Promote `ks-guestbook-demo:0.2` to `green` by patching `Rollout` resource:
-
-```
-argocd app patch-resource blue-green --kind Rollout --resource-name blue-green-helm-guestbook --patch '{ "status": { "verifyingPreview": false } }' --patch-type 'application/merge-patch+json'
-```
-
-This promotes `ks-guestbook-demo:0.2` to `green` status and `Rollout` deletes old replica which runs `ks-guestbook-demo:0.1`.
+Save and sync to gitee!
