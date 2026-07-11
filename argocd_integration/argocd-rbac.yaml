@@ -20,7 +20,9 @@ data:
     p, role:devops, exec, create, devops/*, allow
     p, role:devops, projects, get, devops, allow
     g, devops, role:devops
-    
+
+    # Go to AD check detail of each user, need to ensure email,
+    # displayname present or account won't work
     # Edited to here by Norman via ChatGPT
 
   policy.default: role:none
