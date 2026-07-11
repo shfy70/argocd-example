@@ -1,0 +1,45 @@
+apiVersion: v1
+data:
+  policy.csv: |
+    # Admin role
+    p, role:admin, *, *, *, allow
+    g, admin, role:admin
+
+    # Partner role: full control only inside partner project
+    p, role:partner, applications, *, partner/*, allow
+    p, role:partner, applicationsets, *, partner/*, allow
+    p, role:partner, logs, get, partner/*, allow
+    p, role:partner, exec, create, partner/*, allow
+    p, role:partner, projects, get, partner, allow
+    g, partner, role:partner
+
+    # DevOps role: full control only inside devOps project
+    p, role:devops, applications, *, devops/*, allow
+    p, role:devops, applicationsets, *, devops/*, allow
+    p, role:devops, logs, get, devops/*, allow
+    p, role:devops, exec, create, devops/*, allow
+    p, role:devops, projects, get, devops, allow
+    g, devops, role:devops
+    
+    # Edited to here by Norman via ChatGPT
+
+  policy.default: role:none
+  scopes: '[groups]'
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: argocd
+    meta.helm.sh/release-namespace: argocd
+  creationTimestamp: "2026-02-24T04:47:19Z"
+  labels:
+    app.kubernetes.io/component: server
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: argocd-rbac-cm
+    app.kubernetes.io/part-of: argocd
+    app.kubernetes.io/version: v3.3.2
+    helm.sh/chart: argo-cd-9.4.4
+  name: argocd-rbac-cm
+  namespace: argocd
+  resourceVersion: "2323809"
+  uid: eac1cf17-01d9-4fb8-93a6-af2b316e5cf3
