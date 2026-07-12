@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devops-monitoring
+  name: devops-health
   namespace: argocd
 
 spec:
   project: devops-project
 
   source:
-    repoURL: https://github.com/example/devops-monitoring.git
+    repoURL: https://github.com/shfy70/argocd.git
     targetRevision: HEAD
-    path: manifests
+    path: health-check
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: devops-monitoring
+    namespace: devops-health
