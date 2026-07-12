@@ -8,9 +8,9 @@ spec:
   project: partner-project
 
   source:
-    repoURL: https://github.com/example/partner-web.git
+    repoURL: https://github.com/shfy70/argocd.git
     targetRevision: HEAD
-    path: manifests
+    path: solar-system
 
   destination:
     server: https://212.2.243.159:6443
