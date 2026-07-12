@@ -6,19 +6,23 @@ data:
     g, admin, role:admin
 
     # Partner role: full control only inside partner project
-    p, role:partner, applications, *, partner/*, allow
-    p, role:partner, applicationsets, *, partner/*, allow
-    p, role:partner, logs, get, partner/*, allow
-    p, role:partner, exec, create, partner/*, allow
-    p, role:partner, projects, get, partner, allow
+    p, role:partner, applications, get, partner-project/*, allow
+    p, role:partner, applications, create, partner-project/*, allow
+    p, role:partner, applications, update, partner-project/*, allow
+    p, role:partner, applications, delete, partner-project/*, allow
+    p, role:partner, applications, sync, partner-project/*, allow
+    p, role:partner, logs, get, partner-project/*, allow
+    p, role:partner, clusters, get, https://212.2.243.159:6443, allow
     g, partner, role:partner
 
     # DevOps role: full control only inside devOps project
-    p, role:devops, applications, *, devops/*, allow
-    p, role:devops, applicationsets, *, devops/*, allow
-    p, role:devops, logs, get, devops/*, allow
-    p, role:devops, exec, create, devops/*, allow
-    p, role:devops, projects, get, devops, allow
+    p, role:devops, applications, get, devops-project/*, allow
+    p, role:devops, applications, create, devops-project/*, allow
+    p, role:devops, applications, update, devops-project/*, allow
+    p, role:devops, applications, delete, devops-project/*, allow
+    p, role:devops, applications, sync, devops-project/*, allow
+    p, role:devops, logs, get, devops-project/*, allow
+    p, role:devops, clusters, get, https://kubernetes.default.svc, allow
     g, devops, role:devops
 
     # Go to AD check detail of each user, need to ensure email,

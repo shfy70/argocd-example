@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: partner-web
+  namespace: argocd
+
+spec:
+  project: partner-project
+
+  source:
+    repoURL: https://github.com/example/partner-web.git
+    targetRevision: HEAD
+    path: manifests
+
+  destination:
+    server: https://212.2.243.159:6443
+    namespace: partner-web

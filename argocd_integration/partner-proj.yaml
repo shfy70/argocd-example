@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: partner-project
+  namespace: argocd
+
+spec:
+  description: Applications managed by partner users
+
+  sourceRepos:
+    - '*'
+
+  destinations:
+    - server: https://212.2.243.159:6443
+      namespace: 'partner-*'
+
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'

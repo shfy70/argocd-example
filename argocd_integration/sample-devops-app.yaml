@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devops-monitoring
+  namespace: argocd
+
+spec:
+  project: devops-project
+
+  source:
+    repoURL: https://github.com/example/devops-monitoring.git
+    targetRevision: HEAD
+    path: manifests
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: devops-monitoring
