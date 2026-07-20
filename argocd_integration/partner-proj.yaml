@@ -13,6 +13,8 @@ spec:
   destinations:
     - server: https://212.2.243.159:6443
       namespace: 'partner-*'
+    - server: https://kubernetes.default.svc
+      namespace: argocd
 
   namespaceResourceWhitelist:
     - group: '*'
