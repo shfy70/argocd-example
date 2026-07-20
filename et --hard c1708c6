@@ -1,0 +1,199 @@
+*   [33md0dd4a5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'master' of https://github.com/shfy70/argocd-example
+[31m|[m[32m\[m  
+[31m|[m * [33m262b48f[m sync
+* [32m|[m [33m2ccb917[m revert
+[32m|[m[32m/[m  
+* [33mc1708c6[m sync all
+* [33m2288e74[m sync
+* [33md51ebc5[m commit new change
+* [33m34237a9[m minor update
+* [33m9211a59[m Commit the change for ArgoCd/Active Direct integration
+*   [33m3e5afe6[m Merge branch 'master' of https://github.com/shfy70/argocd-example
+[33m|[m[34m\[m  
+[33m|[m * [33md7122bf[m delete a couple of files!
+[33m|[m * [33m9883937[m vyty
+[33m|[m * [33m56b9992[m emty2
+* [34m|[m [33m5a9bfbb[m first helm chart deployment
+[34m|[m[34m/[m  
+* [33m4927918[m commit to gitt1
+* [33mc3e2a61[m reduce workload for civo
+* [33mdd903e4[m change to civo cluster
+* [33mc727b6d[m ffff
+* [33m95779bd[m sync
+* [33maef4bd4[m sync the pvc portion for solar2
+* [33m91c2482[m sync
+* [33md0fa529[m commit to 5Gi
+* [33mfa1fe7b[m commit
+* [33me82247b[m use the pvc for small deployment
+* [33md5ede58[m sync for nginx
+* [33m7c95a64[m fix: point nginx app to correct repo URL
+* [33mbb2d38b[m proper URL for nginx is charts.bitnami.com
+* [33m530e278[m first yaml onto civo
+* [33me82cc1b[m PV and PVC stuff
+* [33mf02176b[m prometheus error
+* [33ma310d09[m corrected by AI
+* [33m135f098[m Apply again!
+* [33m903a608[m correct based on claude AI
+* [33mcbd2e71[m push to github as suggested by DeepSeek v4 Pro
+* [33mda49471[m remote-cluster-deploy in sync!
+* [33m8ed2ce8[m upload, but secrets are fake
+* [33mdbe2a5a[m tyy
+* [33m50ccc18[m minor
+* [33mdf5d4ed[m OK!
+* [33m6e1c3c1[m commit!
+* [33m92b2988[m update
+* [33ma44bc52[m change folder structure
+* [33m9024168[m name change
+* [33m2077f1f[m change type of number
+* [33mcb6d79e[m minor update
+* [33m3c9cd7d[m sync with repo
+* [33md64dbf0[m commit change
+* [33m69c4a76[m change folder name
+* [33mcc2be19[m remove space for directory names
+* [33mdf670bf[m add MBUSAA examples
+* [33ma41ef2f[m minor syntax error
+* [33m48428fc[m minor collrection
+* [33m30804d6[m click nan save
+* [33m4c42065[m Delete sync-options/no-prune/deployment.yaml
+* [33mdbf4250[m Update deployment.yaml
+* [33m705e4c4[m sync the damn thing
+* [33ma7c5007[m init
+* [33m6fc7f54[m correction
+* [33m1926055[m redf
+* [33m8deea63[m th
+* [33mcd39189[m minor error
+* [33m34e1922[m multil-source code
+* [33mfdabc41[m again
+* [33m6662f9a[m initial update
+* [33m3519a6b[m Update guestbook-ui-svc.yaml
+* [33mfa875a8[m fix image repo
+* [33mf9e92d4[m fix image path
+* [33m780c4f5[m fix: replace image reisgtry
+* [33m93860ce[m add ingress-nginx values
+* [33m35b956d[m add manifests
+* [33mea4fbb7[m rename
+* [33m65ccd3b[m add manifests
+* [33mffcce7d[m update istio
+* [33mc51443a[m update istio
+* [33m245b8bc[m add istio charts
+* [33m4c1298f[m Update deployment.yaml
+* [33m503442f[m Create service.yaml
+* [33m4f8cf9b[m Delete service.yaml
+* [33m7544e54[m Create service.yaml
+* [33md804a06[m Delete service.yaml
+* [33m326c11b[m Update guestbook-ui-deployment.yaml
+* [33m8c9ff5b[m Update guestbook-ui-deployment.yaml
+* [33m5e68505[m add helm charts
+* [33mfa5954c[m update waves
+* [33m5e23a4d[m add file
+* [33mfee7d53[m delete kustomize file
+* [33m8f862da[m update
+* [33mba741a4[m update
+* [33m3680a4f[m update names
+* [33m15b549b[m update post sync hook deletion
+* [33mba1ca21[m add skip
+* [33mb21539c[m add skip
+* [33m12e303a[m add pre sync
+* [33m30c7c0d[m exit-1
+* [33m495189a[m add sync phases
+* [33m7737991[m sync phase
+* [33mbf5f52f[m sync phase
+* [33m0046431[m sync phase
+* [33m8347c07[m Update guestbook-ui-deployment.yaml
+* [33m2455bb6[m Update service.yaml
+* [33m1bb8375[m Update service.yaml
+* [33mc50c74f[m Update service.yaml
+* [33m6b8132f[m Update service.yaml
+* [33m09aaa58[m Create service.yaml
+* [33mc27c688[m Create deployment.yaml
+* [33mcdf2bb6[m Create deployment.yaml
+* [33m98acfb8[m Create service.yaml
+* [33m0f7a03f[m Delete prune-last
+* [33m480311d[m Create prune-last
+* [33me1cbbf1[m Delete sync-options/prune-last directory
+* [33m459525b[m Create service.yaml
+* [33mcd01bde[m Delete deployment-prune-last.yaml
+* [33m4255582[m Delete deployment-1.yaml
+* [33m31d9a17[m Update deployment.yaml
+* [33m0ed3c96[m Create deployment-1.yaml
+* [33me4887ec[m Create deployment.yaml
+* [33mda1867a[m Delete service-prune-last.yaml
+* [33m1ff4baf[m Delete deployment.yaml
+* [33mb71a155[m Update deployment-prune-last.yaml
+* [33mb93d0e8[m Rename service-last.yaml to service-prune-last.yaml
+* [33m82054d9[m Create deployment-prune-last.yaml
+* [33m1e0e150[m Rename service.yaml to service-last.yaml
+* [33m0c8cb41[m Create service.yaml
+* [33m22272c3[m Create deployment.yaml
+* [33m17353b3[m Update deployment.yaml
+* [33m645c271[m Update deployment.yaml
+* [33mf17ea7e[m Update service.yaml
+* [33mec6fe58[m Update deployment.yaml
+* [33m6929641[m Update deployment.yaml
+* [33ma976f15[m Update deployment.yaml
+* [33m3246803[m Create service.yaml
+* [33m16842d2[m Create deployment.yaml
+* [33m45f1957[m Create deployment.yaml
+* [33ma01403a[m Delete deployment.yaml
+* [33mfc92450[m Create deployment.yaml
+* [33ma2fd378[m Create service.yaml
+* [33m8c42ccc[m Delete service-no-prune.yaml
+* [33m1c0f55f[m Create service-no-prune.yaml
+* [33m61ab879[m Delete service-1.yaml
+* [33mc3f89a5[m Delete service-2.yaml
+* [33mfecf328[m Update service-2.yaml
+* [33mf7d3ee5[m Create service-2.yaml
+* [33m00f7ff3[m Create service-1.yaml
+* [33m7e13cc7[m Update service.yaml
+* [33ma01379d[m Update service.yaml
+* [33m7d6e9f4[m Create deployment.yaml
+* [33mad297a7[m Delete deployment.yaml
+* [33m9d13d98[m Update deployment.yaml
+* [33m0904c31[m Delete configmap.yaml
+* [33ma04fb60[m Update configmap.yaml
+* [33m29cf1df[m Update configmap.yaml
+* [33mceffdf6[m Update deployment.yaml
+* [33m1fd2fec[m Create configmap.yaml
+* [33m30943e9[m Update deployment.yaml
+* [33m0892d97[m Update deployment.yaml
+* [33mce85e6e[m Update deployment.yaml
+* [33m2b76849[m Update deployment.yaml
+* [33me225aa3[m Update deployment.yaml
+* [33m8cd2b85[m Update deployment.yaml
+* [33md860b39[m Update deployment.yaml
+* [33maba9b5d[m Update deployment.yaml
+* [33meec99f9[m Update deployment.yaml
+* [33m86569a5[m Update deployment.yaml
+* [33m74baa7a[m Update deployment.yaml
+* [33m230852d[m Update deployment.yaml
+* [33m432742d[m Update deployment.yaml
+* [33m7220c4a[m Create service.yaml
+* [33m9f044bf[m Delete service.yaml
+* [33m88fb9f2[m Create deployment.yaml
+* [33mcd14861[m Delete deployment.yaml
+* [33mdfd576f[m Update deployment.yaml
+* [33m8f724dd[m Update Chart.yaml
+* [33m48467cc[m Create service.yaml
+* [33m6152bce[m Update deployment.yaml
+* [33m13e1e4c[m Create deployment.yaml
+* [33m53e28ff[m feat: update helm samples to use helm3 (#78)
+* [33m466269d[m Move helm repo from  to (#75)
+* [33m08f72e2[m chore: downgrade kustomize guestbook image tag (#73)
+* [33m6bed858[m Updates examples to better reflect hook usage today (#41)
+* [33m94ad32f[m Tidy up the examples repo + add a Helm hooks examples (#40)
+* [33m5c2d89b[m Use apps/v1 API for Deployment resources (#38)
+* [33mb4ebe00[m Fix broken pre-post-sync example (#37)
+* [33m1ccdee0[m doc-fix: update kasane readme (#36)
+* [33m6150e82[m Clean-up (#35)
+* [33m08836bd[m add application of applications example (#29)
+* [33m454cc52[m Add example for jsonnet using functions with top level arguments (#30)
+* [33m0ad95c5[m Sync wave (#28)
+* [33m35ca7c3[m Update README.md (#26)
+* [33me8fe380[m Adds finalizers (#25)
+* [33mc77a1b2[m fix (#23)
+* [33m3636323[m Adds app-of-apps (#22)
+* [33m90ff684[m Fix blue-gree example instructions (#21)
+* [33m3f461c3[m Add link to blue green sample app (#20)
+* [33mfd70f16[m Add blue-green deployment example (#19)
+* [33m826b3fa[m Fix init command in Helm + Kustomize example (#15)
+* [33m3ef31ae[m Removes blue-green-deploy. Removes kust
