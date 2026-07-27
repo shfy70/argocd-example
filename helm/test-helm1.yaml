@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: podinfo
-  namespace: argocd
+  namespace: devops-helm
 spec:
   project: default
   source:
