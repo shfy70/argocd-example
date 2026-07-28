@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: nginx-svc
   labels:
-    app: nginx
+    app: nginx2
 spec:
   type: ClusterIP
   selector:
-    app: nginx
+    app: nginx2
   ports:
     - protocol: TCP
       port: 80
