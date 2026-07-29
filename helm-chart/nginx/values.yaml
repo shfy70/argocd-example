@@ -11,7 +11,7 @@ replicaCount: 3
 ## @param image.tag Nginx image tag to use
 image:
   name: "nginx"
-  tag: "1.28.1"
+  tag: "1.28.0"
 
 ## NGINX container ports
 ##
