@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx2
   labels:
-    app: nginx2  ###intentionally change to nginx2
+    app: nginx2
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
