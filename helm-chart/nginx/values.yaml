@@ -1,0 +1,6 @@
+# Replicate count
+# Image, both name and tag
+# Service type and port
+
+## @parameter replicaCount  Number of nginx replicas to be deployed
+replicaCount: 3
