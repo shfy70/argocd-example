@@ -4,3 +4,11 @@
 
 ## @parameter replicaCount  Number of nginx replicas to be deployed
 replicaCount: 3
+
+
+## Setting for nginx images
+## @param image.name Nginx image name to use
+## @param image.tag Nginx image tag to use
+image:
+  name: "nginx2"
+  tag: "1.28.1"
