@@ -1,0 +1,18 @@
+## I am yaml genius
+{{- /* I am not included in the template */}}
+{{- /* <function name> <arg1> <arg2> ....*/}}
+test: {{ lower .Values.test | replace "c" "T" }}
+labels:
+  {{- /* The app label comes from release */}}
+  app: {{ .Release.Name }}
+  {{- /* The chart label comes from chart */}}
+  chart: {{ .Chart.Name }}
+  {{- if eq .Values.environment "production" }}
+  environment: production
+  build: stable
+  public-ingress: true
+  {{- else }}
+  environment: dev
+  build: alpha
+  public-ingress: false
+  {{- end }}
