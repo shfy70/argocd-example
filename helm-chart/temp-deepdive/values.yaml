@@ -1,3 +1,7 @@
+## @param customNName to set custom resource name
+## Defaults to {{ .Release.Name }}-{{ .Chart.Name }}.
+customName: ''
+
 ## @parameter replicaCount  Number of nginx replicas to be deployed
 replicaCount: 3
 
