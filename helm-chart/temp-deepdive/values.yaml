@@ -14,3 +14,11 @@ image:
 ## @param containerPort NGINX container port
 mycontainerPort:
   http: 80
+
+## Setting for NGINX Services
+## @param service.type Service type
+## @param service.port Service port
+service:
+  enabled: true
+  type: ClusterIP
+  port: 80

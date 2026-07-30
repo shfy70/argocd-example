@@ -25,5 +25,6 @@ mycontainerPort:
 ## @param service.type Service type
 ## @param service.port Service port
 service:
+  enabled: true
   type: ClusterIP
   port: 80
