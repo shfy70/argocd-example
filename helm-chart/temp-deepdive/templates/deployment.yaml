@@ -1,21 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "temp-deepdive.selectorLabels" . }}
-  labels:
-    app: {{ .Chart.Name }}
-    release: {{ .Release.Name }}
+  name: {{ include "temp-deepdive.fullname" . }}
+  labels: {{ include "temp-deepdive.selectorLabels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
-    matchLabels:
-      app: {{ .Chart.Name }}
-      release: {{ .Release.Name }}
+    matchLabels: {{ include "temp-deepdive.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      labels:
-        app: {{ .Chart.Name }}
-        release: {{ .Release.Name }}
+      labels: {{ include "temp-deepdive.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: nginx

@@ -8,3 +8,9 @@ replicaCount: 3
 image:
   name: "nginx"
   tag: "1.28.0"
+
+## NGINX container ports
+##
+## @param containerPort NGINX container port
+mycontainerPort:
+  http: 80
