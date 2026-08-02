@@ -1,0 +1,102 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: efk
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: subaru
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: kubernetes.io/no-provisioner
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: efk-elasticsearch-pv
+  labels:
+    app: elasticsearch
+    storage: subaru-nfs
+spec:
+  capacity:
+    storage: 60Gi
+
+  accessModes:
+    - ReadWriteOnce
+
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: subaru
+
+  mountOptions:
+    - vers=3
+    - proto=tcp
+    - hard
+    - timeo=600
+    - retrans=2
+
+  nfs:
+    server: 192.168.1.40
+    path: /volume1/k8s/elasticsearch
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: efk-kibana-pv
+  labels:
+    app: kibana
+    storage: subaru-nfs
+spec:
+  capacity:
+    storage: 60Gi
+
+  accessModes:
+    - ReadWriteOnce
+
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: subaru
+
+  mountOptions:
+    - vers=3
+    - proto=tcp
+    - hard
+    - timeo=600
+    - retrans=2
+
+  nfs:
+    server: 192.168.1.40
+    path: /volume1/k8s/kibana
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: elasticsearch-data
+  namespace: efk
+spec:
+  accessModes:
+    - ReadWriteOnce
+
+  storageClassName: subaru
+  volumeName: efk-elasticsearch-pv
+
+  resources:
+    requests:
+      storage: 60Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kibana-data
+  namespace: efk
+spec:
+  accessModes:
+    - ReadWriteOnce
+
+  storageClassName: subaru
+  volumeName: efk-kibana-pv
+
+  resources:
+    requests:
+      storage: 60Gi
