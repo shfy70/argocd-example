@@ -1,0 +1,9 @@
+dependencies:
+- name: mysql
+  repository: https://charts.bitnami.com/bitnami
+  version: 9.4.5
+- name: rabbitmq
+  repository: https://charts.bitnami.com/bitnami
+  version: 11.2.2
+digest: sha256:55fee4f8c0920dd6177186c131d8f6b738acf03b060bd0ebc10bc183c1b39576
+generated: "2026-08-11T13:44:58.3395296-05:00"
